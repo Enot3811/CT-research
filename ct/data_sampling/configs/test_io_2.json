@@ -1,0 +1,103 @@
+{
+  "tests": [
+    {
+      "datasets": [
+        {
+          "h5_path": "DS1",
+          "split_number": 1,
+          "generator_name": "SingleReader"
+        },
+        {
+          "h5_path": "DS2",
+          "split_number": 1,
+          "generator_name": "SingleReader"
+        }
+      ]
+    },
+    {
+      "datasets": [
+        {
+          "h5_path": "DS1",
+          "split_number": 5,
+          "generator_name": "SingleReader"
+        },
+        {
+          "h5_path": "DS2",
+          "split_number": 5,
+          "generator_name": "SingleReader"
+        }
+      ]
+    },
+    {
+      "datasets": [
+        {
+          "h5_path": "DS1",
+          "split_number": 1,
+          "generator_name": "SingleAugReader"
+        },
+        {
+          "h5_path": "DS2",
+          "split_number": 1,
+          "generator_name": "SingleAugReader"
+        }
+      ]
+    },
+    {
+      "datasets": [
+        {
+          "h5_path": "DS1",
+          "split_number": 5,
+          "generator_name": "SingleAugReader"
+        },
+        {
+          "h5_path": "DS2",
+          "split_number": 5,
+          "generator_name": "SingleAugReader"
+        }
+      ]
+    },
+    {
+      "datasets": [
+        {
+          "h5_path": "DS1",
+          "split_number": 5,
+          "generator_name": "BufAugReader"
+        },
+        {
+          "h5_path": "DS2",
+          "split_number": 5,
+          "generator_name": "BufAugReader"
+        }
+      ]
+    }
+  ],
+  "generators": {
+    "SingleReader": {
+      "class": "CTReader",
+      "crop_shape": [
+        96,
+        96,
+        96
+      ],
+      "buffer_size": 1
+    },
+    "SingleAugReader": {
+      "class": "CTAugmentedReader",
+      "crop_shape": [
+        96,
+        96,
+        96
+      ],
+      "buffer_size": 1
+    },
+    "BufAugReader": {
+      "class": "CTAugmentedReader",
+      "crop_shape": [
+        96,
+        96,
+        96
+      ],
+      "buffer_size": 10
+    }
+  }
+}

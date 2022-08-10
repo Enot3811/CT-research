@@ -1,0 +1,37 @@
+{
+    "lr": 0.001,
+    "epochs": 2,
+    "optimizer": "adabelief",
+
+    "train": {
+        "batch_size": 1,
+        "prefetch": 1,
+        "datasets": [
+            {
+                "path": "",
+                "splits_n": 1
+            },
+            {
+                "path": "",
+                "splits_n": 1
+            }
+        ],
+        "num_workers": 1
+    },
+
+    "val": {
+        "batch_size": 1,
+        "prefetch": 1,
+        "datasets": [
+            {
+                "path": "",
+                "splits_n": 1
+            },
+            {
+                "path": "",
+                "splits_n": 1
+            }
+        ],
+        "num_workers": 1
+    }
+}

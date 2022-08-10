@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "datasets": [
+        {
+          "h5_path": "/tmp/ds100.h5",
+          "split_number": 1,
+          "generator_name": "SingleReader"
+        }
+      ],
+      "block_length": 1
+    },
+    {
+      "datasets": [
+        {
+          "h5_path": "/tmp/ds100.h5",
+          "split_number": 10,
+          "generator_name": "SingleReader"
+        }
+      ],
+      "block_length": 1
+    },
+    {
+      "datasets": [
+        {
+          "h5_path": "/tmp/ds100.h5",
+          "split_number": 10,
+          "generator_name": "SingleReader"
+        }
+      ],
+      "block_length": 10
+    }
+  ],
+  "generators": {
+    "SingleReader": {
+      "class": "CTSampler",
+      "crop_shape": [
+        96,
+        96,
+        96
+      ]
+    }
+  }
+}
